@@ -144,7 +144,7 @@ class MULoaderPlugin implements PluginInterface, EventSubscriberInterface {
 		}
 		file_put_contents(
 			$muPath . 'mu-require.php',
-			"<?php\nrequire_once __DIR__ . '${toLoader}';\n"
+			'<?php' . PHP_EOL . 'require_once __DIR__ . \'' . $toLoader . '\';' . PHP_EOL
 		);
 	}
 	/**
